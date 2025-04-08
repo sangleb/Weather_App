@@ -8,7 +8,7 @@ function UpperHalf() {
                 {/* Search bar div */}
                 <input
                     placeholder="Search"
-                    className="px-2 py-2 rounded-bl-md rounded-tl-md block basis-[90%] bg-white text-black"
+                    className="p-2 rounded-bl-md rounded-tl-md block basis-[90%] bg-white text-black"
                     type="text"
                 />
                 <button className="block basis-[10%] text-white text-lg font-semibold bg-sky-500 p-2 rounded-br-md rounded-tr-md">
