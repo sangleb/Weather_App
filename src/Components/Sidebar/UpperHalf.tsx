@@ -3,22 +3,35 @@ import sunnyDay from "../../assets/sunnyday.png";
 
 function UpperHalf() {
     return (
-        <div className="h-[50%] w-full p-4 flex flex-col justify-center items-center">
-            <div className="flex flex-start w-full">
+        <div className="h-[50%] w-full p-4 flex flex-col justify-center items-start basis-[65%]">
+            <div className="flex flex-start w-full mt-8">
                 {/* Search bar div */}
                 <input
                     placeholder="Search"
-                    className="px-2 py-2 rounded-bl-md rounded-tl-md block basis-3/4 bg-white text-black"
+                    className="px-2 py-2 rounded-bl-md rounded-tl-md block basis-[90%] bg-white text-black"
                     type="text"
                 />
-                <button className="block basis-auto text-white text-lg font-semibold bg-sky-500 p-2 rounded-br-md rounded-tr-md">
+                <button className="block basis-[10%] text-white text-lg font-semibold bg-sky-500 p-2 rounded-br-md rounded-tr-md">
                     <IoSearch />
                 </button>
             </div>
             
-            <div>
+            <div className="w-full h-[50%] flex justify-center mt-8">
                 {/* image container */}
-                <img src={sunnyDay} alt="" />
+                <img 
+                    src={sunnyDay} 
+                    className="w-[50%] h-full"
+                />
+            </div>
+
+            <div className="flex flex-col mt-6">
+                {/* Temperature Data */}
+                <div className="text-block text-7xl text-center">
+                    23 °C
+                </div>
+                <div className="text-black text-xl">
+                    Tuesday, 9:35 PM
+                </div>
             </div>
         </ div>        
     )
