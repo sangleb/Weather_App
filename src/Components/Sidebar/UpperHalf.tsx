@@ -21,7 +21,7 @@ function UpperHalf() {
                 <img 
                     src={sunnyDay} 
                     className="w-[50%] h-full"
-                />
+                />  
             </div>
 
             <div className="flex flex-col mt-6">
