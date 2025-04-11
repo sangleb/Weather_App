@@ -8,7 +8,7 @@ function MainData() {
             <div className="flex flex-col ml-10">
                 <TopRow />
                 <WeekRow /> 
-            <div>
+            <div className="font-semibold text-2xl text-left w-full mt-8 px-12 py-2">
                 Today's Highlight
             </div>
                 <HighlightRow />
