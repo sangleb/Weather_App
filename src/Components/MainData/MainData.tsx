@@ -4,8 +4,7 @@ import HighlightRow from "./HighlightRow";
 
 function MainData() {
     return(
-        <div className="flex flex-col justify-between items-start py-4 basis-9/12 text-black h-full bg-[#f6f6f8] rounded-br-3xl rounded-tr-3xl" 
-            style={{background: 'rgba(255, 255, 255)'}}>
+        <div className="overflow-y-auto flex flex-col justify-start items-start py-4 basis-9/12 text-black bg-[#f6f6f8] rounded-br-3xl rounded-tr-3xl" >
             <div className="flex flex-col ml-10">
                 <TopRow />
                 <WeekRow /> 

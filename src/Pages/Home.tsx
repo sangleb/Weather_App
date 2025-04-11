@@ -1,15 +1,15 @@
 import MainData from "../Components/MainData/MainData";
 import Sidebar from "../Components/Sidebar/Sidebar";
-import nightImg from "../assets/nightImg.jpg";
 import DayImage from "../assets/dayImage.png";
 
 function Home(){
     return(
-        <div className="h-[100vh]" style={{backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${DayImage})`, backgroundSize: 'cover'}}>
-            <div className="h-full mx-8 flex flex-row justify-center items-center">
+        <div className="min-h-[100vh] px-16 py-8 flex flex-row justify-center items-stretch" 
+            style={{backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${DayImage})`, 
+            backgroundSize: 'cover'}}
+        >
                 <Sidebar />
                 <MainData />
-            </div>
         </ div>
     )
 
