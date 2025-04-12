@@ -1,7 +1,12 @@
 import { FaCloud, FaDroplet} from "react-icons/fa6";
 import { IoLocation } from "react-icons/io5";
+import { useSelector } from "react-redux";
+import ReduxState from "../../Interfaces/ReduxState";
 
 function LowerHalf() {
+
+    const currentData = useSelector((state: ReduxState) => state.forecast.data.currentData);
+
     return (
         <div className="h-[50%] w-full p-4 flex flex-col justify-between">
             <div className="flex flex-col">
@@ -11,7 +16,7 @@ function LowerHalf() {
                         <FaCloud />
                     </div>
                     <div>
-                        Partially cloudy
+                        {currentData.condition}
                     </div>   
                 </div>
 
@@ -20,7 +25,7 @@ function LowerHalf() {
                         <FaDroplet />   
                     </div>
                     <div>
-                        perc-10 %
+                        perc-{currentData.chance_of_rain}%
                     </div>
                 </div>
             </div>

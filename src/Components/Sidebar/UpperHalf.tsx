@@ -1,7 +1,14 @@
 import { IoSearch } from "react-icons/io5";
 import sunnyDay from "../../assets/sunnyday.png";
+import { useSelector } from "react-redux";
+import ReduxState from "../../Interfaces/ReduxState";
+
 
 function UpperHalf() {
+
+    const currentData = useSelector((state: ReduxState) => state.forecast.data.currentData);
+
+
     return (
         <div className="max-h-[30rem] w-full p-4 flex flex-col justify-center items-start basis-[65%]">
             <div className="flex flex-start w-full mt-8">
@@ -27,7 +34,7 @@ function UpperHalf() {
             <div className="flex flex-col mt-6">
                 {/* Temperature Data */}
                 <div className="text-block text-7xl text-center">
-                    23 °C
+                    {currentData.temp_c} °C
                 </div>
                 <div className="text-black text-xl">
                     Tuesday, 9:35 PM

@@ -1,4 +1,6 @@
 function TopRow(){
+
+    
     return(
         <div className="flex justify-between items-center w-full px-12 py-2">
             <div className="flex items-center justify-center text-xl font-semibold">

@@ -3,6 +3,8 @@ import WeekRow from "./WeekRow";
 import HighlightRow from "./HighlightRow";
 
 function MainData() {
+
+    
     return(
         <div className="overflow-y-auto flex flex-col justify-start items-start py-4 basis-9/12 text-black bg-[#f6f6f8] rounded-br-3xl rounded-tr-3xl" >
             <div className="flex flex-col ml-10">
