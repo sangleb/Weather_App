@@ -34,7 +34,8 @@ function UpperHalf() {
             <div className="flex flex-col mt-6">
                 {/* Temperature Data */}
                 <div className="text-block text-7xl text-center">
-                    {currentData.temp_c} °C
+                    <div>{currentData.temp_c}</div>
+                    <div className="text-5xl mt-1">°C</div>
                 </div>
                 <div className="text-black text-xl">
                     Tuesday, 9:35 PM

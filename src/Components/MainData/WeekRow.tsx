@@ -6,17 +6,24 @@ import ReduxState from "../../Interfaces/ReduxState";
 
 function WeekRow(){
 
-    const currentData = useSelector((state: ReduxState) => state.forecast.data.currentData);
+    const dayForecast = useSelector((state: ReduxState) => state.forecast.data.dayForecast);
+
+    const weekdays = [
+        'Sun',
+        'Mon',
+        'Tue',
+        'Wed',
+        'Thu',
+        'Fri',
+        'Sat'
+    ]
 
     return(
         <div className="w-full px-12 py-2 flex flex-wrap gap-5">
-            <TempCard title="Mon" temperature="20 °C" image={sunnyDay}/>
-            <TempCard title="Mon" temperature="20 °C" image={sunnyDay}/>
-            <TempCard title="Mon" temperature="20 °C" image={sunnyDay}/>
-            <TempCard title="Mon" temperature="20 °C" image={sunnyDay}/>
-            <TempCard title="Mon" temperature="20 °C" image={sunnyDay}/>
-            <TempCard title="Mon" temperature="20 °C" image={sunnyDay}/>
-            <TempCard title="Mon" temperature="20 °C" image={sunnyDay}/>
+            {dayForecast && dayForecast.map((forecast) => {
+                return <TempCard title={weekdays[(new Date(forecast.date)).getDay()]} temperature={forecast.avgtemp_c.toString()} image={sunnyDay}/>
+            })}            
+            
         </div>
     )
     

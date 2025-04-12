@@ -6,6 +6,8 @@ import ReduxState from "../../Interfaces/ReduxState";
 function LowerHalf() {
 
     const currentData = useSelector((state: ReduxState) => state.forecast.data.currentData);
+    const location = useSelector((state: ReduxState) => state.forecast.data.location);
+
 
     return (
         <div className="h-[50%] w-full p-4 flex flex-col justify-between">
@@ -35,7 +37,7 @@ function LowerHalf() {
                     <IoLocation />
                 </div>
                 <div>
-                    Pune, MH, India
+                    {location.name}, {location.region}, {location.country}
                 </div>
             </div>
         </ div>        
