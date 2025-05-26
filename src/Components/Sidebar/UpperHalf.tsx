@@ -1,5 +1,5 @@
 import { IoSearch } from "react-icons/io5";
-import sunnyDay from "../../assets/sunnyday.png";
+import sunnyDay from "../../assets/sunnyDay.png";
 import { useSelector } from "react-redux";
 import ReduxState from "../../Interfaces/ReduxState";
 
@@ -33,7 +33,7 @@ function UpperHalf() {
 
             <div className="flex flex-col mt-6">
                 {/* Temperature Data */}
-                <div className="text-block text-7xl text-center">
+                <div className="flex text-block text-7xl text-center">
                     <div>{currentData.temp_c}</div>
                     <div className="text-5xl mt-1">°C</div>
                 </div>
